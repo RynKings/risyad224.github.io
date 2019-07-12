@@ -13,6 +13,8 @@ function initializeApp(){
     var type = getParameterByName('type')
     if (type=== "text") {
         liff.sendMessages([{type: 'text',text: getParameterByName('text')}]).then(function () {liff.closeWindow()});
+    }else if(type==="primary"){
+        liff.sendMessages([{type: 'text',text: 'GOBLOK'}]).then(function () {liff.closeWindow()});
     }else if(type=="sticker"){
         var stk = getParameterByName('tstk');
         var sid = getParameterByName('stkid');
